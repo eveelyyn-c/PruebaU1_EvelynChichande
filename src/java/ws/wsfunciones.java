@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ws;
 
 import java.util.ArrayList;
@@ -81,13 +77,41 @@ public class wsfunciones {
             if (encryption != null) {
                 return encryption.decrypt(encryptedPassword);
             } else {
-                // Manejar el caso cuando la instancia de AES_ENCRYPTION es nula
                 return "";
             }
         } catch (Exception e) {
-            // Manejar cualquier excepción aquí
             return "";
         }
     }
-    
+ 
+    @WebMethod(operationName = "subirProducto")
+    public String subirProducto(Producto producto) {
+        return "";
+    }
+
+    @WebMethod(operationName = "actualizarIinventario")
+    public String actualizarInventario(int productoId, int cantidad) {
+        return "";
+    }
+
+    @WebMethod
+    public String asignarProveedor(int productoId, int proveedorId) {
+        return "Proveedor asignado exitosamente.";
+    }
+
+    @WebMethod
+    public String actualizarCompra(int compraId, Compra compra) {
+        return "Compra actualizada exitosamente.";
+    }
+
+    @WebMethod
+    public String registrarVenta(Venta venta) {
+        return "Venta registrada exitosamente.";
+    }
+
+    @WebMethod
+    public String obtenerVentas() {
+        return "Ventas obtenidas exitosamente.";
+    }
+
 }
